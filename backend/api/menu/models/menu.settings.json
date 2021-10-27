@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus",
+  "info": {
+    "name": "Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home": {
+      "type": "string",
+      "default": "strona główna"
+    },
+    "about": {
+      "type": "string",
+      "default": "o nas"
+    },
+    "projects": {
+      "type": "string",
+      "default": "projects"
+    },
+    "contact": {
+      "type": "string",
+      "default": "kontakt"
+    }
+  }
+}
