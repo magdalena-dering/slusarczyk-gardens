@@ -1,14 +1,14 @@
 import { createStyles } from "@mui/styles"
-import { SvgIconProps } from "./svg.model"
+import { ISvgIcon } from "./svg.model"
 
 export const styles = () =>
   createStyles({
-    svgIconContainer: ({ ...props }: SvgIconProps) => ({
-      width: props.width ? props.width : "22px",
-      height: props.height ? props.height : "22px",
+    svgIconContainer: ({ ...props }: ISvgIcon) => ({
+      width: props.width ? props.width : "24px",
+      height: props.height ? props.height : "24px",
       "& > svg": {
-        width: props.width ? props.width : "22px",
-        height: props.height ? props.height : "22px",
+        width: props.width ? props.width : "24px",
+        height: props.height ? props.height : "24px",
       },
     }),
     resourceNameStyle: {

@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material"
+import { createTheme } from '@mui/material/styles';
 
 const fontWeight = {
   regular: 400,
@@ -16,24 +16,20 @@ const theme = createTheme({
   },
   palette: {
     common: {
-      black: "#000000",
-      white: "#ffffff",
+      black: "#000",
+      white: "#fff"
     },
     primary: {
-      main: "#12bc66",
-      dark: "#333",
+      light: '#5c5c5c',
+      main: '#333333',
+      dark: '#0c0c0c',
+      contrastText: '#fff',
     },
     secondary: {
-      main: "#ffffff",
-    },
-    text: {
-      primary: "#000000",
-    },
-    background: {
-      default: "#F5F6F7",
-    },
-    error: {
-      main: "#d32f2f",
+      light: '#7fff76',
+      main: "#3ee743",
+      dark: '#00b300',
+      contrastText: '#fff',
     },
   },
   breakpoints: {
@@ -45,49 +41,6 @@ const theme = createTheme({
       xl: 1920,
     },
   },
-  // overrides: {
-  //   MuiButton: {
-  //     root: {
-  //       borderRadius: "50px",
-  //     },
-  //     textSizeSmall: {
-  //       padding: "6px 12px",
-  //     },
-  //   },
-  //   MuiButtonBase: {
-  //     root: {
-  //       borderRadius: "50px",
-  //       boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.1)",
-  //       padding: "12px 14px",
-  //     },
-  //   },
-  //   MuiPaper: {
-  //     rounded: {
-  //       borderRadius: "15px",
-  //     },
-  //     elevation1: {
-  //       boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.1)",
-  //     },
-  //   },
-  //   MuiTextField: {
-  //     root: {
-  //       padding: "0 16px",
-  //       "& > *": {
-  //         padding: "0 16px",
-  //       },
-  //     },
-  //   },
-  //   MuiFormHelperText: {
-  //     root: {
-  //       padding: 0,
-  //     },
-  //   },
-  //   MuiTableContainer: {
-  //     root: {
-  //       width: "auto",
-  //     },
-  //   },
-  // },
 })
 
 export default theme

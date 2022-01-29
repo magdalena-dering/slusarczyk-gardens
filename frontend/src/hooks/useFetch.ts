@@ -8,19 +8,17 @@ const useFetch = <T>(url: string) => {
 
   useEffect(() => {
     setLoading(true)
-    axios
-      .get(url)
-      .then(resp => {
+    const fetchData = async () => {
+      try {
+        const res = await axios(url)
+        setResponses(res.data)
         setLoading(false)
-        setError(false)
-        setResponses(resp.data)
-      })
-      .catch(err => {
-        setLoading(false)
+      } catch {
         setError(true)
-        setResponses(null)
-      })
-    return () => {}
+        setLoading(false)
+      }
+    }
+    fetchData()
   }, [url])
 
   return [responses, loading, error] as const
