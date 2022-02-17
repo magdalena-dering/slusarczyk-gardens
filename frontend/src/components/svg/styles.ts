@@ -11,8 +11,4 @@ export const styles = () =>
         height: props.height ? props.height : "24px",
       },
     }),
-    resourceNameStyle: {
-      marginRight: "5px",
-      marginLeft: "16px",
-    },
   })

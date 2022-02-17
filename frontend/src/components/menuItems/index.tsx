@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useStyles } from "./styles";
-import { Typography } from "@mui/material";
-import { IMenu } from "../menu.model";
-import { MenuContext } from "../../../context/menu";
+import { MenuItem } from "@mui/material";
+import { IMenuItems } from "../header/menu.model";
+import { MenuContext } from "../../context/menu";
 
-const MenuItems: React.FC<IMenu> = () => {
-  const classes = useStyles();
+const MenuItems: React.FC<IMenuItems> = (mobile) => {
+  const classes = useStyles(mobile);
   const { menu } = useContext(MenuContext);
 
   return (
@@ -15,36 +15,49 @@ const MenuItems: React.FC<IMenu> = () => {
         const { id, home, about, projects, contact } = menuItems;
         return (
           <div key={id} className={classes.menu}>
-            <Typography className={classes.menuItem} to="/" component={NavLink} fontWeight="bold">
+            <MenuItem className={classes.menuItem} to="/" component={NavLink} sx={{
+              fontWeight: "bold",
+              fontSize: "16px",
+            }}>
               {home}
-            </Typography>
-            <Typography
+            </MenuItem>
+            <MenuItem
               className={classes.menuItem}
               activeClassName={classes.active}
               to={`/${about}`}
               component={NavLink}
-              fontWeight="bold"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
+
             >
               {about}
-            </Typography>
-            <Typography
+            </MenuItem>
+            <MenuItem
               className={classes.menuItem}
               activeClassName={classes.active}
               to={`/${projects}`}
               component={NavLink}
-              fontWeight="bold"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
             >
               {projects}
-            </Typography>
-            <Typography
+            </MenuItem>
+            <MenuItem
               className={classes.menuItem}
               activeClassName={classes.active}
               to={`/${contact}`}
               component={NavLink}
-              fontWeight="bold"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
             >
               {contact}
-            </Typography>
+            </MenuItem>
           </div>
         );
       })}

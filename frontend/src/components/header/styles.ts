@@ -3,16 +3,18 @@ import theme from '../../theme';
 
 export const useStyles = makeStyles(() => ({
   root: {
-    display: "block",
     borderRadius: "32px",
+    minHeight: "60px",
   },
   toolbar: {
     width: "10%",
     display: "inline-flex",
     backgroundColor: theme.palette.secondary.dark,
-    borderBottomLeftRadius: "30px",
-    borderTopLeftRadius: "30px",
+    borderBottomLeftRadius: "20px",
+    borderTopLeftRadius: "20px",
     [theme.breakpoints.up("sm")]: {
+      borderBottomLeftRadius: "30px",
+      borderTopLeftRadius: "30px",
       width: "65%",
     },
   },
@@ -33,7 +35,7 @@ export const useStyles = makeStyles(() => ({
   contact: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     width: "90%",
     padding: "0 24px",
     [theme.breakpoints.up("sm")]: {
@@ -42,19 +44,20 @@ export const useStyles = makeStyles(() => ({
   },
   contactPhone: {
     display: "flex",
-
+    alignItems: "center",
+    paddingRight: '25px',
+    [theme.breakpoints.up("md")]: {
+      paddingRight: '50px',
+    },
     "& svg": {
       fill: theme.palette.common.white,
     },
   },
-  contactSocial: {
-    display: "flex",
-    alignItems: "center",
-    "& > div": {
-      [theme.breakpoints.up("sm")]: {
-        margin: "0 6px",
-      },
-      margin: "0 12px",
+  contactEmail: {
+    borderLeft: `2px solid ${theme.palette.common.white}`,
+    paddingLeft: '25px',
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: '50px',
     },
     "& svg": {
       fill: theme.palette.common.white,
@@ -63,10 +66,11 @@ export const useStyles = makeStyles(() => ({
   contactItem: {
     color: theme.palette.common.white,
     fontWeight: "bold",
-    paddingLeft: "24px",
+    paddingLeft: "6px",
     textAlign: "center",
     [theme.breakpoints.up("sm")]: {
       textAlign: "unset",
+      paddingLeft: "16px",
     },
   },
 }));

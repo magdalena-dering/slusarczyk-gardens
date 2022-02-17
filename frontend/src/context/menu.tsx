@@ -1,12 +1,12 @@
 import { createContext, ReactChild } from "react"
-import { IMenu } from "../components/menu/menu.model"
+import { IMenuItems } from "../components/header/menu.model"
 
 interface IProvider {
   children?: ReactChild
 }
 
 export interface MenuContextData {
-  menu?: IMenu[]
+  menu?: IMenuItems[]
 }
 
 export const menuContextDefaultValue: MenuContextData = {

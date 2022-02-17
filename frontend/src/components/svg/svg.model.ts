@@ -1,6 +1,6 @@
 import { IconNames } from "../../types"
 export interface ISvgIconNames {
-  icons: IconNames.phone | IconNames.facebook | IconNames.linkedin | IconNames.instagram | IconNames.burger
+  icons: IconNames.phone | IconNames.facebook | IconNames.linkedin | IconNames.instagram | IconNames.burger | IconNames.close | IconNames.mail
 }
 
 export interface ISvgIcon {
@@ -8,5 +8,4 @@ export interface ISvgIcon {
   icon?: React.ReactNode
   width?: string
   height?: string
-  isResourceName?: boolean
 }

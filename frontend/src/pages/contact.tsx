@@ -1,11 +1,11 @@
 import React from "react"
 import Container from "../components/container"
-import Menu from "../components/menu"
+import Header from "../components/header"
 
 const Contact = () => (
   <Container>
-    <Menu />
-    Contact
+    <Header />
+    <p>Contact</p>
   </Container>
 )
 

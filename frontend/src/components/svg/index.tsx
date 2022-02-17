@@ -1,5 +1,4 @@
 import React from "react"
-import clsx from "clsx"
 import { styles } from "./styles"
 import { ISvgIcon } from "./svg.model"
 import { makeStyles } from "@mui/styles"
@@ -12,10 +11,7 @@ const SvgIcon: React.FC<ISvgIcon> = props => {
 
   return (
     <div
-      className={clsx(
-        classes.svgIconContainer,
-        props.isResourceName && classes.resourceNameStyle
-      )}
+      className={classes.svgIconContainer}
     >
       {icon}
     </div>

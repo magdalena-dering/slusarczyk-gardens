@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "../components/container";
-import Menu from "../components/menu";
+import Header from "../components/header";
 
 const Home = () => (
   <Container>
-    <Menu />
+    <Header />
     <p>Home</p>
   </Container>
 );
