@@ -5,6 +5,7 @@ export const useStyles = makeStyles(() => ({
   root: {
     borderRadius: "32px",
     minHeight: "60px",
+    flexDirection: "unset"
   },
   toolbar: {
     width: "10%",
@@ -63,12 +64,13 @@ export const useStyles = makeStyles(() => ({
       fill: theme.palette.common.white,
     },
   },
-  contactItem: {
+  phone: {
     color: theme.palette.common.white,
     fontWeight: "bold",
+    fontSize: "16px",
     paddingLeft: "6px",
     textAlign: "center",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       textAlign: "unset",
       paddingLeft: "16px",
     },

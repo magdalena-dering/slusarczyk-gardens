@@ -32,7 +32,7 @@ const Header: React.FC<IMenuItems> = () => {
 
   return (
     <>
-      <AppBar className={classes.root} position="static" sx={{ flexDirection: "unset" }}>
+      <AppBar className={classes.root} position="static">
         <Toolbar className={classes.toolbar}>
           {isMobile ? (
             <IconButton className={classes.iconButton} aria-controls={open ? 'basic-menu' : undefined}
@@ -50,7 +50,7 @@ const Header: React.FC<IMenuItems> = () => {
             <IconButton>
               <SvgIcon icon={<icons.phone />} width="28px" height="28px" />
             </IconButton>
-            <Typography className={classes.contactItem} fontWeight="bold" fontSize="16px">796 793 513</Typography>
+            <Typography className={classes.phone} >796 793 513</Typography>
           </div>
           <div className={classes.contactEmail}>
             <IconButton component={Link} to="/kontakt">

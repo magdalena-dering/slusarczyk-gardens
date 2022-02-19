@@ -12,6 +12,7 @@ export const useStyles = makeStyles(() => ({
   menuItem: ({ mobile }: IMenuItems) => ({
     color: mobile ? theme.palette.common.black : theme.palette.common.white,
     fontWeight: "bold",
+    fontSize: "16px",
     height: "60px",
     justifyContent: mobile ? "center !important" : "unset",
     textTransform: "capitalize",

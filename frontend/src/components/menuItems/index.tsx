@@ -15,10 +15,7 @@ const MenuItems: React.FC<IMenuItems> = (mobile) => {
         const { id, home, about, projects, contact } = menuItems;
         return (
           <div key={id} className={classes.menu}>
-            <MenuItem className={classes.menuItem} to="/" component={NavLink} sx={{
-              fontWeight: "bold",
-              fontSize: "16px",
-            }}>
+            <MenuItem className={classes.menuItem} to="/" component={NavLink} >
               {home}
             </MenuItem>
             <MenuItem
@@ -26,11 +23,6 @@ const MenuItems: React.FC<IMenuItems> = (mobile) => {
               activeClassName={classes.active}
               to={`/${about}`}
               component={NavLink}
-              sx={{
-                fontWeight: "bold",
-                fontSize: "16px",
-              }}
-
             >
               {about}
             </MenuItem>
@@ -39,10 +31,6 @@ const MenuItems: React.FC<IMenuItems> = (mobile) => {
               activeClassName={classes.active}
               to={`/${projects}`}
               component={NavLink}
-              sx={{
-                fontWeight: "bold",
-                fontSize: "16px",
-              }}
             >
               {projects}
             </MenuItem>
@@ -51,10 +39,6 @@ const MenuItems: React.FC<IMenuItems> = (mobile) => {
               activeClassName={classes.active}
               to={`/${contact}`}
               component={NavLink}
-              sx={{
-                fontWeight: "bold",
-                fontSize: "16px",
-              }}
             >
               {contact}
             </MenuItem>
