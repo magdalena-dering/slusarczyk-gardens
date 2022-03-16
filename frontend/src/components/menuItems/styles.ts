@@ -1,6 +1,6 @@
+import { IMenuItems } from './menuItems.model';
 import { makeStyles } from '@mui/styles';
 import theme from '../../theme';
-import { IMenuItems } from '../header/menu.model';
 
 export const useStyles = makeStyles(() => ({
   menu: ({ mobile }: IMenuItems) => ({
@@ -14,15 +14,15 @@ export const useStyles = makeStyles(() => ({
     fontWeight: "bold",
     fontSize: "16px",
     height: "60px",
-    justifyContent: mobile ? "center !important" : "unset",
+    justifyContent: mobile ? "center" : "unset",
     textTransform: "capitalize",
     padding: 0,
     "&:hover": {
-      backgroundColor: "unset !important"
+      backgroundColor: "unset"
     },
   }),
   active: {
-    borderBottom: `2px solid ${theme.palette.common.white} !important`,
+    borderBottom: `2px solid ${theme.palette.common.white}`,
     height: '100px',
   },
 }));

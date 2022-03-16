@@ -1,10 +1,7 @@
 import React from "react";
 import { Container as MuiContainer } from "@mui/material";
 import { useStyles } from "./styles";
-
-interface IContainer {
-  children: React.ReactNode;
-}
+import { IContainer } from "./container.model";
 
 const Container = ({ children }: IContainer) => {
   const classes = useStyles();

@@ -8,4 +8,5 @@ export interface ISvgIcon {
   icon?: React.ReactNode
   width?: string
   height?: string
+  color?: string
 }

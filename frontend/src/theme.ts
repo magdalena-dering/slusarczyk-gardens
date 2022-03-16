@@ -26,19 +26,31 @@ const theme = createTheme({
       contrastText: '#fff',
     },
     secondary: {
-      light: '#7fff76',
-      main: "#3ee743",
-      dark: '#00b300',
+      light: '#3ee743',
+      main: "#18c31d",
+      dark: '#129216',
       contrastText: '#fff',
     },
   },
+  spacing: [4, 8, 12, 20, 32, 52, 84],
   breakpoints: {
     values: {
-      xs: 0,
+      xs: 400,
       sm: 600,
       md: 960,
       lg: 1280,
       xl: 1920,
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontSize: '16px',
+          borderRadius: '30px',
+          textTransform: 'capitalize',
+        },
+      },
     },
   },
 })

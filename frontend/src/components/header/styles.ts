@@ -5,24 +5,25 @@ export const useStyles = makeStyles(() => ({
   root: {
     borderRadius: "32px",
     minHeight: "60px",
-    flexDirection: "unset"
+    flexDirection: "unset",
+    backgroundColor: theme.palette.primary.light,
   },
   toolbar: {
     width: "10%",
     display: "inline-flex",
-    backgroundColor: theme.palette.secondary.dark,
-    borderBottomLeftRadius: "20px",
-    borderTopLeftRadius: "20px",
+    backgroundColor: theme.palette.secondary.main,
+    borderBottomLeftRadius: "30px",
+    borderTopLeftRadius: "30px",
     [theme.breakpoints.up("sm")]: {
-      borderBottomLeftRadius: "30px",
-      borderTopLeftRadius: "30px",
       width: "65%",
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: `0 ${theme.spacing(4)}`,
     },
   },
   iconButton: {
-    marginRight: "20px",
     [theme.breakpoints.up("sm")]: {
-      marginRight: "40px",
+      marginRight: theme.spacing(5),
     },
     "& svg": {
       fill: theme.palette.common.white,
@@ -38,7 +39,7 @@ export const useStyles = makeStyles(() => ({
     alignItems: "center",
     justifyContent: "center",
     width: "90%",
-    padding: "0 24px",
+    padding: `0 ${theme.spacing(4)}`,
     [theme.breakpoints.up("sm")]: {
       width: "35%",
     },
@@ -46,33 +47,37 @@ export const useStyles = makeStyles(() => ({
   contactPhone: {
     display: "flex",
     alignItems: "center",
-    paddingRight: '25px',
-    [theme.breakpoints.up("md")]: {
-      paddingRight: '50px',
-    },
+    paddingRight: theme.spacing(4),
     "& svg": {
       fill: theme.palette.common.white,
     },
+  },
+  link: {
+    textDecoration: 'unset',
   },
   contactEmail: {
+    display: "flex",
+    alignItems: "center",
+    cursor: 'pointer',
     borderLeft: `2px solid ${theme.palette.common.white}`,
-    paddingLeft: '25px',
-    [theme.breakpoints.up("md")]: {
-      paddingLeft: '50px',
-    },
+    paddingLeft: theme.spacing(4),
     "& svg": {
       fill: theme.palette.common.white,
     },
   },
-  phone: {
+  text: {
     color: theme.palette.common.white,
     fontWeight: "bold",
     fontSize: "16px",
-    paddingLeft: "6px",
+    paddingLeft: theme.spacing(2),
     textAlign: "center",
     [theme.breakpoints.up("md")]: {
-      textAlign: "unset",
-      paddingLeft: "16px",
+      paddingLeft: theme.spacing(2),
     },
+  },
+  paper: {
+    "& div": {
+      width: '100%',
+    }
   },
 }));

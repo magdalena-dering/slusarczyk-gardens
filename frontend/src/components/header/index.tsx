@@ -1,33 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
   Typography,
   IconButton,
   useMediaQuery,
+  Dialog,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { IMenuItems } from "./menu.model";
 import SvgIcon from "../svg";
 import MenuItems from "../menuItems";
 import { icons } from "../../types";
 import { useStyles } from "./styles";
 import MenuMobile from "../menuMobile";
-import { Link } from "react-router-dom";
+import Form from "../form";
 
-
-const Header: React.FC<IMenuItems> = () => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+const Header: React.FC = () => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [displayForm, setDisplayForm] = useState<boolean>(false);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+
+  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleMenuClose = () => {
     setAnchorEl(null);
+  };
+  const handleContactFormOpen = () => {
+    setDisplayForm(true)
+  };
+  const handleContactFormClose = () => {
+    setDisplayForm(false)
   };
 
   const classes = useStyles();
   const theme = useTheme();
+  const isXsMobile = useMediaQuery(theme.breakpoints.down("xs"));
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
@@ -38,30 +46,36 @@ const Header: React.FC<IMenuItems> = () => {
             <IconButton className={classes.iconButton} aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
-              onClick={handleClick}>
-              <SvgIcon icon={<icons.burger />} />
+              onClick={handleMenuOpen}>
+              <SvgIcon icon={<icons.burger />} color="red" />
             </IconButton>
           ) : (
             <MenuItems mobile={false} />
           )}
         </Toolbar>
         <div className={classes.contact}>
-          <div className={classes.contactPhone}>
-            <IconButton>
-              <SvgIcon icon={<icons.phone />} width="28px" height="28px" />
-            </IconButton>
-            <Typography className={classes.phone} >796 793 513</Typography>
-          </div>
-          <div className={classes.contactEmail}>
-            <IconButton component={Link} to="/kontakt">
+          <a className={classes.link} href="tel:0048 796 793 513">
+            <div className={classes.contactPhone}>
+              <IconButton>
+                <SvgIcon icon={<icons.phone />} width="28px" height="28px" />
+              </IconButton>
+              <Typography className={classes.text} >796 793 513</Typography>
+            </div>
+          </a>
+          <div className={classes.contactEmail} onClick={handleContactFormOpen}>
+            <IconButton >
               <SvgIcon icon={<icons.mail />} width="28px" height="28px" />
             </IconButton>
+            {!isXsMobile && (<Typography className={classes.text} >Napisz do nas</Typography>)}
           </div>
         </div>
       </AppBar>
       {isMobile && (
-        <MenuMobile anchorEl={anchorEl} open={open} handleClose={handleClose} />
+        <MenuMobile anchorEl={anchorEl} open={open} handleClose={handleMenuClose} />
       )}
+      <Dialog open={displayForm} onClose={handleContactFormClose} className={classes.paper} >
+        <Form displayForm={displayForm} onClose={handleContactFormClose} />
+      </Dialog>
     </>
   );
 };

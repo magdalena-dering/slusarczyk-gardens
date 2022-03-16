@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useStyles } from "./styles";
 import { MenuItem } from "@mui/material";
-import { IMenuItems } from "../header/menu.model";
 import { MenuContext } from "../../context/menu";
+import { IMenuItems } from "./menuItems.model";
 
 const MenuItems: React.FC<IMenuItems> = (mobile) => {
   const classes = useStyles(mobile);

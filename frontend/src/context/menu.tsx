@@ -1,5 +1,6 @@
 import { createContext, ReactChild } from "react"
-import { IMenuItems } from "../components/header/menu.model"
+import { IMenuItems } from "../components/menuItems/menuItems.model"
+
 
 interface IProvider {
   children?: ReactChild

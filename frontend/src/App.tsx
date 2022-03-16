@@ -4,9 +4,9 @@ import theme from "./theme";
 import AppRouter from "./router";
 import { MenuContext } from "./context/menu";
 import useFetch from "./hooks/useFetch";
-import { IMenuItems } from "./components/header/menu.model";
 import { CacheProvider } from "@emotion/react";
 import createCache from '@emotion/cache';
+import { IMenuItems } from "./components/menuItems/menuItems.model";
 
 const App = () => {
   const [responses] = useFetch<IMenuItems>("http://localhost:1337/menus");
