@@ -20,9 +20,9 @@ const theme = createTheme({
       white: "#fff"
     },
     primary: {
-      light: '#5c5c5c',
-      main: '#333333',
-      dark: '#0c0c0c',
+      light: '#d6d6d6',
+      main: '#5c5c5c',
+      dark: '#4e4e4e',
       contrastText: '#fff',
     },
     secondary: {
@@ -35,7 +35,7 @@ const theme = createTheme({
   spacing: [4, 8, 12, 20, 32, 52, 84],
   breakpoints: {
     values: {
-      xs: 400,
+      xs: 460,
       sm: 600,
       md: 960,
       lg: 1280,

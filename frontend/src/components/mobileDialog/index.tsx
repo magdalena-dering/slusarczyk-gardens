@@ -1,19 +1,19 @@
 import * as React from 'react';
-import Menu from '@mui/material/Menu';
 import MenuItems from '../menuItems';
 import { useStyles } from './styles';
-import { IconButton } from '@mui/material';
+import { IconButton, Menu, useTheme } from '@mui/material';
 import SvgIcon from '../svg';
 import { icons } from '../../types';
 
-export interface IMenuMobile {
+export interface IMobileDialog {
     anchorEl?: HTMLElement | null
     open: boolean;
     handleClose: any;
 }
 
-const MenuMobile = ({ anchorEl, open, handleClose }: IMenuMobile) => {
+const MobileDialog = ({ anchorEl, open, handleClose }: IMobileDialog) => {
     const classes = useStyles();
+    const theme = useTheme();
 
     return (
         <Menu
@@ -31,7 +31,7 @@ const MenuMobile = ({ anchorEl, open, handleClose }: IMenuMobile) => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClose}>
-                <SvgIcon icon={<icons.close />}
+                <SvgIcon icon={<icons.close />} color={theme.palette.primary.dark}
                 />
             </IconButton>
             <MenuItems mobile />
@@ -39,4 +39,4 @@ const MenuMobile = ({ anchorEl, open, handleClose }: IMenuMobile) => {
     );
 }
 
-export default MenuMobile
+export default MobileDialog

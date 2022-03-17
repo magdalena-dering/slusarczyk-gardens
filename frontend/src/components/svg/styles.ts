@@ -10,6 +10,7 @@ export const styles = () =>
       "& > svg": {
         width: props.width ? props.width : "24px",
         height: props.height ? props.height : "24px",
+        color: props.color ? props.color : theme.palette.common.white,
         fill: props.color ? props.color : theme.palette.common.white,
       },
     }),

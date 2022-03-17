@@ -3,6 +3,6 @@ import theme from '../../theme';
 
 export const useStyles = makeStyles(() => ({
   root: {
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(4),
   },
 }));

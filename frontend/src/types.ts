@@ -6,6 +6,9 @@ import {
   BurgerIcon,
   CloseIcon,
   MailIcon,
+  LogoIcon,
+  ClockIcon,
+  LocationIcon,
 } from "./assets"
 
 export enum IconNames {
@@ -16,6 +19,9 @@ export enum IconNames {
   burger = "burger",
   close = "close",
   mail = "mail",
+  logo = "logo",
+  clock = "clock",
+  location = "location"
 }
 
 class Icons {
@@ -26,6 +32,9 @@ class Icons {
   burger = BurgerIcon
   close = CloseIcon
   mail = MailIcon
+  logo = LogoIcon
+  clock = ClockIcon
+  location = LocationIcon
 }
 
 export const icons = new Icons()

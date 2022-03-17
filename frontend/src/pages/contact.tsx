@@ -1,10 +1,12 @@
 import React from "react"
 import Container from "../components/container"
-import Header from "../components/header"
+import TopBar from "../components/topBar"
+import MenuBar from "../components/menuBar"
 
 const Contact = () => (
   <Container>
-    <Header />
+    <TopBar />
+    <MenuBar />
     <p>Contact</p>
   </Container>
 )

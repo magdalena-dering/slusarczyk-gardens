@@ -6,7 +6,7 @@ export const useStyles = makeStyles(() => ({
     borderRadius: "32px",
     minHeight: "60px",
     flexDirection: "unset",
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
   },
   toolbar: {
     width: "10%",

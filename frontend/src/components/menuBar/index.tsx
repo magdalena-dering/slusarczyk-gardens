@@ -6,16 +6,16 @@ import {
   IconButton,
   useMediaQuery,
   Dialog,
+  useTheme
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import SvgIcon from "../svg";
 import MenuItems from "../menuItems";
 import { icons } from "../../types";
 import { useStyles } from "./styles";
-import MenuMobile from "../menuMobile";
+import MobileDialog from "../mobileDialog";
 import Form from "../form";
 
-const Header: React.FC = () => {
+const MenuBar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [displayForm, setDisplayForm] = useState<boolean>(false);
   const open = Boolean(anchorEl);
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
         </div>
       </AppBar>
       {isMobile && (
-        <MenuMobile anchorEl={anchorEl} open={open} handleClose={handleMenuClose} />
+        <MobileDialog anchorEl={anchorEl} open={open} handleClose={handleMenuClose} />
       )}
       <Dialog open={displayForm} onClose={handleContactFormClose} className={classes.paper} >
         <Form displayForm={displayForm} onClose={handleContactFormClose} />
@@ -80,4 +80,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default MenuBar;

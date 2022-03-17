@@ -1,6 +1,6 @@
 import { IconNames } from "../../types"
 export interface ISvgIconNames {
-  icons: IconNames.phone | IconNames.facebook | IconNames.linkedin | IconNames.instagram | IconNames.burger | IconNames.close | IconNames.mail
+  icons: IconNames.phone | IconNames.facebook | IconNames.linkedin | IconNames.instagram | IconNames.burger | IconNames.close | IconNames.mail | IconNames.logo | IconNames.location | IconNames.clock
 }
 
 export interface ISvgIcon {

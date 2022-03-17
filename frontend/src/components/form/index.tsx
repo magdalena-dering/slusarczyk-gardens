@@ -25,10 +25,10 @@ const Form: React.FC<IForm> = props => {
                     <IconButton
                         className={classes.buttonClose}
                         onClick={props.onClose}>
-                        <SvgIcon icon={<icons.close />} color={theme.palette.primary.light}
+                        <SvgIcon icon={<icons.close />} color={theme.palette.primary.main}
                         />
                     </IconButton>
-                    <Typography variant="h5" color={theme.palette.primary.light} textAlign="center" sx={{
+                    <Typography variant="h5" fontWeight="bold" color="primary" textAlign="center" sx={{
                         py: theme.spacing(4)
                     }} >Napisz do nas</Typography>
                 </div>
@@ -132,7 +132,7 @@ const Form: React.FC<IForm> = props => {
                         rules={{ required: 'Wiadomość jest wymagana.' }}
                     />
                     <Stack direction="row" justifyContent="flex-start">
-                        <LoadingButton type="submit" variant="contained" color="secondary" size="large" sx={{ fontWeight: 'bold' }}>
+                        <LoadingButton type="submit" variant="contained" color="primary" size="large" sx={{ fontWeight: 'bold' }}>
                             Wyślij
                         </LoadingButton>
                     </Stack>
